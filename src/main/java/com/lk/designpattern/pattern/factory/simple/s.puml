@@ -1,0 +1,19 @@
+@startuml
+
+abstract class Product
+class ConCreateProductA
+class ConCreateProductB
+
+
+Product <|-ConCreateProductA
+Product <|-ConCreateProductB
+class Factory
+
+Factory ..> ConCreateProductA
+Factory ..> ConCreateProductB
+
+class Factory{
+   factoryMethod : Product
+}
+
+@enduml

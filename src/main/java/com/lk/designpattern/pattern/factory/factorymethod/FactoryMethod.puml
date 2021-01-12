@@ -1,0 +1,23 @@
+@startuml
+
+abstract class Product
+class ConCreateProductA
+class ConCreateProductB
+Product <|--ConCreateProductA
+Product <|--ConCreateProductB
+
+abstract class Creator
+class ConCreateCreatorA
+class ConCreateCreatorB
+Creator <|--ConCreateCreatorA
+Creator <|--ConCreateCreatorB
+
+ConCreateProductA<..ConCreateCreatorA
+ConCreateProductB<..ConCreateCreatorB
+abstract class Creator{
+   Product factoryMethod()
+   void anOperation()
+}
+
+
+@enduml

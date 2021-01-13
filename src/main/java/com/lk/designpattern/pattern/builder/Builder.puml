@@ -1,0 +1,31 @@
+@startuml
+
+class product
+abstract class Builder
+class ConCreateBuilder
+class Director
+
+Builder <|-- ConCreateBuilder
+product<|--ConCreateBuilder
+Director *-- Builder
+class Builder{
+    void builderProductPartA()
+    void builderProductPartB()
+    void builderProductPartC()
+}
+
+class ConCreateBuilder{
+    void builderProductPartA()
+    void builderProductPartB()
+    void builderProductPartC()
+}
+
+class Director{
+   builder:Builder
+   void construct()
+}
+
+
+
+
+@enduml

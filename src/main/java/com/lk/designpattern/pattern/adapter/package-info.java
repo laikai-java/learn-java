@@ -5,5 +5,7 @@
  * 如何解决：继承或依赖（推荐）。
  *
  * 关键代码：适配器继承或依赖已有的对象，实现想要的目标接口。
+ *
+ * 可以说Source的存在形式(在adapter中)决定了适配器的名字，类适配器就是继承Source类，对象适配器就是持有Source类，接口适配器就是实现Source接口。
  */
 package com.lk.designpattern.pattern.adapter;

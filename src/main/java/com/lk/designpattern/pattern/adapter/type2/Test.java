@@ -1,4 +1,4 @@
-package com.lk.designpattern.pattern.adapter.type1;
+package com.lk.designpattern.pattern.adapter.type2;
 
 
 /**
@@ -10,7 +10,8 @@ package com.lk.designpattern.pattern.adapter.type1;
 public class Test {
     public static void main(String[] args) {
         Phone phone = new Phone();
-        Voltage5V v = new VoltageAdapter();
+        VoltageAdapter v = new VoltageAdapter();
+        v.setVoltage220v(new Voltage220v());
         phone.setVoltage5V(v);
         phone.charge();
     }

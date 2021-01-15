@@ -1,0 +1,27 @@
+@startuml
+
+interface Implementor
+
+class ConCreateImplementorA
+class ConCreateImplementorB
+Implementor<|--ConCreateImplementorA
+Implementor<|--ConCreateImplementorB
+
+abstract class Abstraction
+class RefinedAbstractionA
+class RefinedAbstractionB
+
+Abstraction *-- Implementor
+Abstraction<|-- RefinedAbstractionA
+Abstraction<|-- RefinedAbstractionB
+
+class Abstraction{
+   implementor:Implementor
+}
+
+
+
+
+
+
+@enduml

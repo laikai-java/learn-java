@@ -1,0 +1,33 @@
+@startuml
+
+interface Component
+class ConCreateComponentA
+Component <|-- ConCreateComponentA
+
+Abstract class Decorator
+Component <|-- Decorator
+
+class ConCreateDecoratorA
+class ConCreateDecoratorB
+Decorator <|-- ConCreateDecoratorA
+Decorator <|-- ConCreateDecoratorB
+
+
+interface Component{
+  void method1()
+  void method2()
+}
+
+class ConCreateComponentA{
+   void method1()
+   void method2()
+}
+
+class Decorator{
+    Component component
+}
+
+
+
+
+@enduml

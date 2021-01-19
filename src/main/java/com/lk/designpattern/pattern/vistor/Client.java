@@ -17,7 +17,7 @@ public class Client {
         Visitor workerOfPharmacy = new WorkerOfPharmacy();
         workerOfPharmacy.setName("赖凯");
         presciption.accept(workerOfPharmacy);
-
+        
         Visitor charger = new Charger();
         charger.setName("lcp");
         presciption.accept(charger);
